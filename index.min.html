@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html> <head><meta charset=utf-8><meta http-equiv=X-UA-Compatible content=IE=edge><link href=https://fonts.googleapis.com/css?family=Baloo+Thambi+2&amp;display=swap rel=stylesheet><link href=https://fonts.googleapis.com/css2?family=Quicksand:wght@300&amp;display=swap rel=stylesheet><script src=https://kit.fontawesome.com/efca709025.js crossorigin=anonymous></script><meta content="width=device-width, initial-scale=1" name=viewport><title>Sourakanti : Student Developer</title><style>
+			*{
+				margin: 0;
+				padding: 0;
+				font-family: 'Quicksand', sans-serif;
+			}
+			html, body{
+				height: 100%;
+			}
+			body{
+				background: #1E1E1E;
+			}
+			nav{
+				width: 0%;
+				height: 0%;
+				background: grey;
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+				transition: 0.4s ease;
+				margin-left: -100%;
+			}
+			nav ul{
+				display: flex;
+				flex-direction: column;
+				background: linear-gradient(78deg, #1B1B1B, #000000);
+				list-style-type: none;
+				height: 100%;
+				justify-content: center;
+				align-items: center;
+			}
+			nav ul li{
+				display: block;
+				width: 100%;
+				text-align: center;
+			}
+			nav ul li a{
+				display: block;
+				text-decoration: none;
+				color: white;
+				padding: 17px 0px;
+				transition: 0.4s ease;
+				font-size: 20px;
+			}
+			nav .social{
+				display: flex;
+				color: white;
+				justify-content: space-around;
+				width: 25%;
+				padding-top: 35px;
+			}
+			nav .social a{
+				text-decoration: none;
+				color: white;
+				font-size: 1.3rem;
+				transition: 0.4s ease;
+			}
+			nav .social i{
+				transition: 0.4s ease;
+			}
+			.social #facebook i:hover{
+				color: #00E2FF;
+			}
+			.social #wapp i:hover{
+				color: #36D700;
+			}
+			.social #gmail i:hover{
+				color: red;
+			}
+			.social #discord i:hover{
+				color: #BE60FE;
+			}
+			nav .close-btn{
+				padding-top: 35px;
+			}
+			nav ul li a:hover{
+				color: #FF4D00;
+				font-size: 2rem;
+			}
+			nav .close-btn{
+				color: white;
+				font-size: 1.4rem;
+				transition: 0.4s ease;
+				cursor: pointer;
+			}
+			nav .close-btn:hover{
+				color: #EFFF38;	
+			}
+			nav.active{
+				margin-left: 0px;
+				height: 100%;
+				width: 100%;
+			}
+
+			.open-btn {
+				color: white;
+				cursor: pointer;
+				transition: 0.4s ease;
+				width: 20px;
+				height: 20px;
+				padding: 20px;
+			}
+			.open-btn:hover{
+				font-size: 1.5rem;
+			}
+
+			.hero{
+				color: white;
+				font-weight: 100;
+				font-size: 40px;
+				width: 100%;
+				margin: auto;
+				font-family: 'Quicksand', sans-serif;
+				text-align: center;
+			}
+			@media only screen and (max-width: 650px) {
+				nav .social{
+					width: 60%;
+				}
+			}
+		</style></head> <body> <nav> <ul> <li><a href=#>Home</a></li> <li><a href=#>My Works</a></li> <li><a href=#>About Me</a></li> <li><a href=#>Skillset</a></li> <li><a href=#>Contact Me</a></li> <div class=social> <a href=# id=facebook><i class="fab fa-facebook"></i></a> <a href=# id=wapp><i class="fab fa-whatsapp"></i></a> <a href=# id=gmail><i class="far fa-envelope-open"></i></a> <a href=# id=discord><i class="fab fa-discord"></i></a> </div> <p class=close-btn> <i class="fas fa-chevron-left"></i> </p> </ul> </nav> <div class=open-btn> <i class="fas fa-bars"></i> </div> <main> <h1 class=hero>Hi, this is Soura, a Student Developer</h1> </main> </body> <script src=SAG/jquery-3.4.0.min.js></script> <script>
+	$(document).ready(function(){
+			$(".open-btn").on("click", function(){
+					$("nav").addClass("active");
+					$(this).hide();
+					$("main").hide();
+			});
+			$(".close-btn").on("click", function(){
+					$("nav").removeClass("active");
+					$(".open-btn").show();
+					$("main").show();
+			});
+	})
+	</script> </html>
